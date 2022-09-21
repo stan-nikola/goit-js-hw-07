@@ -37,12 +37,11 @@ function onGalleryElClick(event) {
 }
 
 function onCloseWscModal(event) {
-  const ESC_KEY_CODE_1 = "Escape";
-  const ESC_KEY_CODE_2 = "Space";
+  const ESC_KEY_CODE = "Escape";
 
   const modalContainer = document.querySelector(".basicLightbox");
 
-  if (event.code === ESC_KEY_CODE_1 || event.code === ESC_KEY_CODE_2) {
+  if (event.code === ESC_KEY_CODE) {
     modalContainer.classList.remove("basicLightbox--visible");
     setTimeout(() => modalContainer.remove(), 300);
     window.removeEventListener("keydown", onCloseWscModal);
