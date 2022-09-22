@@ -19,8 +19,7 @@ function createGalleryMarkup(galleryItems) {
     .join("");
 }
 
-const galleryItemsMarkup = createGalleryMarkup(galleryItems);
-galleryContainer.insertAdjacentHTML("afterbegin", galleryItemsMarkup);
+galleryContainer.innerHTML = createGalleryMarkup(galleryItems);
 
 function onGalleryElClick(event) {
   event.preventDefault();
