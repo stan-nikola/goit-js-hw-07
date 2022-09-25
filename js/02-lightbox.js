@@ -18,6 +18,8 @@ galleryContainer.innerHTML = createGalleryMarkup(galleryItems);
 
 new SimpleLightbox(".gallery a", {
   captionDelay: 250,
+  // alertErrorMessage:
+  //   "Изображение не найдено, будет загружено следующее изображение",
   //   disableRightClick: true,
 });
 
