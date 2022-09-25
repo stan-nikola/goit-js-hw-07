@@ -67,104 +67,104 @@ export const galleryItems = [
       "https://www.look.com.ua/download.php?file=201909/640x480/look.com.ua-354060.jpg",
     original:
       "https://www.look.com.ua/download.php?file=201909/1280x960/look.com.ua-354060.jpg",
-    description: "BMW",
+    description: "BMW series",
   },
   {
     preview:
       "https://www.look.com.ua/download.php?file=202209/640x480/look.com.ua-393679.jpg",
     original:
       "https://www.look.com.ua/download.php?file=202209/1280x1024/look.com.ua-393679.jpg",
-    description: "river",
+    description: "River and tree",
   },
   {
     preview:
       "https://www.look.com.ua/download.php?file=201902/640x480/look.com.ua-330591.jpg",
     original:
       "https://www.look.com.ua/download.php?file=201902/1280x1024/look.com.ua-330591.jpg",
-    description: "cats",
+    description: "Lovely Cats",
   },
   {
     preview:
       "https://www.look.com.ua/download.php?file=201209/640x480/look.com.ua-24262.jpg",
     original:
       "https://www.look.com.ua/download.php?file=201209/1280x1024/look.com.ua-24262.jpg",
-    description: "markers",
+    description: "Crazy markers",
   },
   {
     preview:
       "https://www.look.com.ua/download.php?file=201901/640x480/look.com.ua-320769.jpg",
     original:
       "https://www.look.com.ua/download.php?file=201901/1280x1024/look.com.ua-320769.jpg",
-    description: "old map",
+    description: "Old map",
   },
   {
     preview:
       "https://www.look.com.ua/download.php?file=201901/640x480/look.com.ua-320657.jpg",
     original:
       "https://www.look.com.ua/download.php?file=201901/1280x1024/look.com.ua-320657.jpg",
-    description: "train",
+    description: "Train",
   },
   {
     preview:
       "https://www.look.com.ua/download.php?file=202103/640x480/look.com.ua-375515.jpg",
     original:
       "https://www.look.com.ua/download.php?file=202103/1280x1024/look.com.ua-375515.jpg",
-    description: "flowers",
+    description: "Flowers",
   },
   {
     preview:
       "https://www.look.com.ua/download.php?file=202008/640x480/look.com.ua-357648.jpg",
     original:
       "https://www.look.com.ua/download.php?file=202008/1280x1024/look.com.ua-357648.jpg",
-    description: "brilliants",
+    description: "Brilliants",
   },
   {
     preview:
       "https://www.look.com.ua/download.php?file=201512/640x480/look.com.ua-140529.jpg",
     original:
       "https://www.look.com.ua/download.php?file=201512/1280x1024/look.com.ua-140529.jpg",
-    description: "slipping dog",
+    description: "Slipping dog",
   },
   {
     preview:
       "https://www.look.com.ua/download.php?file=202208/640x480/look.com.ua-391672.jpg",
     original:
       "https://www.look.com.ua/download.php?file=202208/1280x1024/look.com.ua-391672.jpg",
-    description: "mushroom",
+    description: "Mushroom",
   },
   {
     preview:
       "https://www.look.com.ua/download.php?file=202209/640x480/look.com.ua-393219.jpg",
     original:
       "https://www.look.com.ua/download.php?file=202209/1280x1024/look.com.ua-393219.jpg",
-    description: "bike",
+    description: "Blue bike",
   },
   {
     preview:
       "https://www.look.com.ua/download.php?file=202206/640x480/look.com.ua-388558.jpg",
     original:
       "https://www.look.com.ua/download.php?file=202206/1280x1024/look.com.ua-388558.jpg",
-    description: "winter",
+    description: "Beautiful winter",
   },
   {
     preview:
       "https://www.look.com.ua/download.php?file=201405/640x480/look.com.ua-103386.jpg",
     original:
       "https://www.look.com.ua/download.php?file=201405/1280x1024/look.com.ua-103386.jpg",
-    description: "flag",
+    description: "Flag of Canada",
   },
   {
     preview:
       "https://www.look.com.ua/download.php?file=202209/640x480/look.com.ua-393645.jpg",
     original:
       "https://www.look.com.ua/download.php?file=202209/1280x1024/look.com.ua-393645.jpg",
-    description: "fruits",
+    description: "Fresh fruits",
   },
   {
     preview:
       "https://www.look.com.ua/download.php?file=202209/640x480/look.com.ua-393478.jpg",
     original:
       "https://www.look.com.ua/download.php?file=202209/1280x1024/look.com.ua-393478.jpg",
-    description: "bread",
+    description: "Grey bread",
   },
 ];

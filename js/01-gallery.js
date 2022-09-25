@@ -49,8 +49,6 @@ function onCloseWscModal(event) {
 
 const lazyImage = document.querySelectorAll("img[data-src]");
 
-console.log(lazyImage);
-
 lazyImage.forEach((image) => {
   image.addEventListener("load", onImageLoad, { once: true });
 });
@@ -60,15 +58,11 @@ function onImageLoad(evt) {
   evt.target.classList.add("appear");
 }
 
-// ==========+++++++Feature detection++++++++++======
-
 if ("loading" in HTMLImageElement.prototype) {
-  // supported in browser
-  console.log("Браузер поддерживает Ленивая загрузка ");
+  console.log("Браузер поддерживает lazyload ");
   addLazyImagesSrc();
 } else {
-  // fetch polyfill/third-party library
-  console.log("Браузер не поддерживает Ленивая загрузка ");
+  console.log("Браузер не поддерживает lazyload ");
   addLazyLoadingScript();
 }
 

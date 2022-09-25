@@ -30,9 +30,9 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  transition: transform var(--animation-duration) var(--timing-function);
   opacity: 0;
-  transition: all 500ms linear;
+  transition: transform var(--animation-duration) var(--timing-function),
+    opacity 500ms var(--timing-function);
 }
 
 .gallery__link {
