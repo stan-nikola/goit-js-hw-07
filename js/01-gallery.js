@@ -27,11 +27,11 @@ function onGalleryElClick(event) {
   if (event.target.nodeName !== "IMG") {
     return;
   }
-  const originalPicModal = basicLightbox.create(`
+  const galleryModal = basicLightbox.create(`
     <img src="${event.target.dataset.source}">
 `);
 
-  originalPicModal.show();
+  galleryModal.show();
   window.addEventListener("keydown", onCloseWscModal);
 }
 
@@ -43,7 +43,10 @@ function onCloseWscModal(event) {
   if (event.code === ESC_KEY_CODE) {
     modalContainer.classList.remove("basicLightbox--visible");
     setTimeout(() => modalContainer.remove(), 300);
-    window.removeEventListener("keydown", onCloseWscModal);
+  }
+
+  if (!modalContainer) {
+    return window.removeEventListener("keydown", onCloseWscModal);
   }
 }
 
