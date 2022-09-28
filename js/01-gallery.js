@@ -31,10 +31,7 @@ function onGalleryElClick(event) {
   galleryModal = basicLightbox.create(`
     <img src="${event.target.dataset.source}">
 `);
-  galleryModal.show(
-    onClickCloseModal,
-    (document.body.style.overflowY = "hidden")
-  );
+  galleryModal.show(onClickCloseModal);
   window.addEventListener("keydown", onEscCloseModal);
 }
 
@@ -57,9 +54,8 @@ function onClickCloseModal() {
   const galleryModalWindow = document.querySelector(".basicLightbox");
 
   galleryModalWindow.addEventListener("click", () => {
-    galleryModal.close(
-      () => window.removeEventListener("keydown", onEscCloseModal),
-      (document.body.style = "")
+    galleryModal.close(() =>
+      window.removeEventListener("keydown", onEscCloseModal)
     );
   });
 }
