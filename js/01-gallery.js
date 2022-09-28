@@ -3,23 +3,24 @@ import { galleryItems } from "./gallery-items.js";
 
 const galleryContainer = document.querySelector(".gallery");
 
-galleryContainer.addEventListener("click", onGalleryElClick);
-
 function createGalleryMarkup(galleryItems) {
   return galleryItems
     .map(({ preview, original, description }) => {
       return `
-        <div class="gallery__item">
-        <a class="gallery__link"  href="${original}">
-        <img loading="lazy" class="gallery__image lazyload" data-source="${original}" data-src="${preview}" alt="${description}"></img>
-        </a>
-        </div>
-        `;
+    <div class="gallery__item">
+    <a class="gallery__link"  href="${original}">
+    <img loading="lazy" class="gallery__image lazyload" data-source="${original}" data-src="${preview}" alt="${description}"></img>
+    </a>
+    </div>
+    `;
     })
     .join("");
 }
-
 galleryContainer.innerHTML = createGalleryMarkup(galleryItems);
+
+galleryContainer.addEventListener("click", onGalleryElClick);
+
+let galleryModal;
 
 function onGalleryElClick(event) {
   event.preventDefault();
@@ -27,29 +28,39 @@ function onGalleryElClick(event) {
   if (event.target.nodeName !== "IMG") {
     return;
   }
-  const galleryModal = basicLightbox.create(`
+  galleryModal = basicLightbox.create(`
     <img src="${event.target.dataset.source}">
 `);
-
-  galleryModal.show();
-  window.addEventListener("keydown", onCloseWscModal);
+  galleryModal.show(onClickCloseModal);
+  window.addEventListener("keydown", onEscCloseModal);
 }
 
-function onCloseWscModal(event) {
+function onEscCloseModal(event) {
   const ESC_KEY_CODE = "Escape";
-
-  const modalContainer = document.querySelector(".basicLightbox");
-
-  if (event.code === ESC_KEY_CODE) {
-    modalContainer.classList.remove("basicLightbox--visible");
-    setTimeout(() => modalContainer.remove(), 300);
+  if (event.code !== ESC_KEY_CODE) {
+    return;
   }
-
-  if (!modalContainer) {
-    return window.removeEventListener("keydown", onCloseWscModal);
-  }
+  galleryModal.close(() =>
+    window.removeEventListener("keydown", onEscCloseModal)
+  );
+  // const modalContainer = document.querySelector(".basicLightbox");
+  //   // if (event.code === ESC_KEY_CODE) {
+  //   //   modalContainer.classList.remove("basicLightbox--visible");
+  //   //   setTimeout(() => modalContainer.remove(), 300);
+  //   // }
 }
 
+function onClickCloseModal() {
+  const galleryModalWindow = document.querySelector(".basicLightbox");
+
+  galleryModalWindow.addEventListener("click", () => {
+    galleryModal.close(() =>
+      window.removeEventListener("keydown", onEscCloseModal)
+    );
+  });
+}
+
+// ================================================================
 const lazyImage = document.querySelectorAll("img[data-src]");
 
 lazyImage.forEach((image) => {
@@ -87,3 +98,21 @@ function addLazyLoadingScript() {
 
   document.body.appendChild(script);
 }
+
+// function onCloseWscModal(event) {
+//   const ESC_KEY_CODE = "Escape";
+
+//   if (event.code === ESC_KEY_CODE) {
+//     galleryModal.close(() => console.log("lightbox not visible anymore"));
+//   }
+//   // window.removeEventListener("keydown", onCloseWscModal);
+//   //
+
+//   // const modalContainer = document.querySelector(".basicLightbox");
+//   // if (event.code === ESC_KEY_CODE) {
+//   //   modalContainer.classList.remove("basicLightbox--visible");
+//   //   setTimeout(() => modalContainer.remove(), 300);
+//   // }
+
+//   console.log(event.code);
+// }
