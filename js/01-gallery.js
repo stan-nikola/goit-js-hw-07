@@ -43,11 +43,6 @@ function onEscCloseModal(event) {
   galleryModal.close(() =>
     window.removeEventListener("keydown", onEscCloseModal)
   );
-  // const modalContainer = document.querySelector(".basicLightbox");
-  //   // if (event.code === ESC_KEY_CODE) {
-  //   //   modalContainer.classList.remove("basicLightbox--visible");
-  //   //   setTimeout(() => modalContainer.remove(), 300);
-  //   // }
 }
 
 function onClickCloseModal() {

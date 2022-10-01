@@ -8,7 +8,7 @@ function createGalleryMarkup() {
     .map(({ preview, original, description }) => {
       return `
     <a class="gallery__item" href='${original}'>
-  <img loading="lazy" class="gallery__image lazyload" data-src='${preview}' alt='${description}' title='${description}' />
+  <img loading="lazy" class="gallery__image lazyload" data-src='${preview}' alt='${description}' />
 </a>
     `;
     })
@@ -17,6 +17,7 @@ function createGalleryMarkup() {
 galleryContainer.innerHTML = createGalleryMarkup(galleryItems);
 
 new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
   captionDelay: 250,
   // alertErrorMessage:
   //   "Изображение не найдено, будет загружено следующее изображение",
